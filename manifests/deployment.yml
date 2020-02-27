@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: goprasadpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: goprasadpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: goprasadpipelinesjavascriptdocker 
+          image: myprgorlecontainerregistry.azurecr.io/goprasadpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
